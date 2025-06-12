@@ -1,0 +1,86 @@
+/* ──────────────────────────────────────────────────────────
+   custom-overrides.css  – drop-in theme layer
+   Keeps ALL original selectors intact; we only override
+   colours, fonts and a couple of cosmetics.
+   ────────────────────────────────────────────────────────── */
+
+/* ===== Design Tokens (edit these to re-skin in seconds) */
+:root {
+    --clr-bg:         #f5f7fa;      /* page background  */
+    --clr-surface:    #ffffff;      /* card & nav background */
+    --clr-text:       #111518;      /* main text colour */
+    --clr-muted:      #6b7280;      /* subtle headings */
+    --clr-primary:    #0156e0;      /* accents, links   */
+    --clr-primary-10: #e3ecff;      /* faint hover tint */
+    --radius:         0.75rem;      /* rounded corners  */
+    --shadow-sm:      0 2px 4px rgb(0 0 0 / 0.06);
+    --shadow-lg:      0 12px 24px rgb(0 0 0 / 0.08);
+    --transition:     200ms cubic-bezier(.4,.2,.2,1);
+  }
+  
+  /* ===== Global tweaks (fonts + base colours) */
+  body {
+    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+  }
+  
+  /* Links */
+  a        { color: var(--clr-primary); }
+  a:hover  { text-decoration: underline; }
+  
+  /* ===== Cards, buttons, images – cosmetic only */
+  .details-container,
+  .color-container {             /* project & skill cards */
+    background: var(--clr-surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .section__pic-container img,
+  .about-pic,
+  .project-img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .btn {
+    border-radius: var(--radius);
+    border: 2px solid var(--clr-primary);
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    transition: transform var(--transition), background var(--transition);
+  }
+  .btn-color-1 { background: var(--clr-primary); color: #fff; }
+  .btn-color-1:hover { background: #0044be; transform: translateY(-2px); }
+  .btn-color-2:hover { background: var(--clr-primary-10); transform: translateY(-2px); }
+  
+  /* Subtle hover “lift” for project tiles */
+  .color-container:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Sticky, glassy nav (works in all modern browsers) */
+  nav#desktop-nav,
+  nav#hamburger-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+    background: rgb(255 255 255 / 0.6);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  /* ===== Fluid typography (optional) */
+  .title { font-size: clamp(2rem, 4vw + 0.5rem, 3rem); font-weight: 800; }
+
+/* Make ONLY the profile photo a perfect circle */
+.avatar,         /* or  #profile .section__pic-container img */
+#profile .section__pic-container img {
+  width: 250px;          /* pick any equal size */
+  height: 250px;         /* ensure perfect square */
+  object-fit: cover;     /* zoom & centre rectangular sources */
+  border-radius: 50%;    /* instant circle */
+  border: 2px solid #000;
+}

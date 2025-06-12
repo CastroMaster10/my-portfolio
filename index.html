@@ -1,0 +1,282 @@
+<!-- index.html — customised for Ruben Dario Castro Terrazas -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruben Castro | Portfolio</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="custom-overrides.css" />
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav id="desktop-nav">
+      <div class="logo">Ruben Castro</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== MOBILE NAV ===== -->
+    <nav id="hamburger-nav">
+      <div class="logo">Ruben Castro</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO / PROFILE ===== -->
+    <section id="profile">
+      <div class="section__pic-container avatar-wrapper">
+        <!-- Replace with your own head-shot -->
+        <img classs='avatar' src="./assets/profile-pic.jpeg" alt="Ruben Castro profile picture" />
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1">Hi, I'm</p>
+        <h1 class="title">Ruben Castro</h1>
+        <p class="section__text__p2">Data Scientist&nbsp;&nbsp;|&nbsp;&nbsp;ML Engineer&nbsp;&nbsp;| Data Engineer</p>
+
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/CV_English_RubenDarioCastroTerrazas_june.pdf')">
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/ruben-castro-732378174/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="GitHub icon"
+            class="icon"
+            onclick="location.href='https://github.com/CastroMaster10'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <p class="section__text__p1">Get To Know Me</p>
+      <h1 class="title">About Me</h1>
+
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/about-pic.jpg" alt="About picture" class="about-pic" />
+        </div>
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p>
+                2 + years<br />
+                AI & Data Science
+              </p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="education icon" class="icon" />
+              <h3>Education</h3>
+              <p>
+                B.Eng.&nbsp;Data Science &amp; Mathematics<br />
+                ITESM (2021-2025) • GPA 3.8
+              </p>
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p>
+              I’m a final-year engineering student passionate about solving real-world problems at
+              the intersection of <strong>machine learning, optimisation and software
+              engineering</strong>. Recently, I’ve applied deep neural networks to non-convex
+              Optimal Power Flow research at Purdue University, built production forecasting models
+              at Grupo Dportenis, and performed exploratory analytics for land-use investment
+              studies. When not coding in Python, you’ll find me tinkering with GAMS models or
+              visualising insights in Tableau.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <!-- ===== SKILLS / EXPERIENCE ===== -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Technical Skills</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- ===== Column 1 ===== -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Programming&nbsp;&amp;&nbsp;ML</h2>
+            <div class="article-container">
+              <!-- Skill card -->
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Python</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>R</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>C++</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Javascript</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>SQL</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Matlab</h3><p>Intermediate</p></div></article>
+            </div>
+          </div>
+          
+          <!-- ===== Column 2 ===== -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Tools&nbsp;&amp;&nbsp;Frameworks&nbsp;&amp;&nbsp; Cloud</h2>
+            <div class="article-container">
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Git / GitHub/h3><p>Experienced</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>PyTorch</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Tableau</h3><p>Intermediat</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Snowflake</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Kedro & Mlflow</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Azure</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>AWS</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Docker</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Power BI</h3><p>Basic</p></div></article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Project 1 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/ACOPF_project.jpg" alt="Grav-Wave project" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Gravitational Wave Detection</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/CastroMaster10/Non-Convex-Optimization-for-the-AC-OPF-problem'">
+                GitHub
+              </button>
+
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-tda.png" alt="TDA project" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Tourist Route Optimisation</h2>
+            <div class="btn-container"> 
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/CastroMaster10/Detecting-Gravitional-Waves-Using-Topological-algorithms?tab=readme-ov-file'">
+                GitHub
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-3.png" alt="NLP Interpreter project" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Natural Language Interpreter</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/core-david/Tour-Orienteering-Problem-With-Time-Windows'">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:rdct0602@gmail.com">rdct0602@gmail.com</a></p>
+        </div>
+
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/ruben-castro-732378174/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>&copy; 2025 Ruben Dario Castro Terrazas. All Rights Reserved.</p>
+    </footer>
+
+    <!-- scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
